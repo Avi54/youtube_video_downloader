@@ -1,0 +1,4 @@
+*
+# Whitelist some files
+!.gitignore
+!.main.py
