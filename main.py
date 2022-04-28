@@ -11,11 +11,11 @@ def download():
 
     # checks if link is valid
     is_valid = check_video_url(video_playlist)
-
+    
     if is_valid:
         # directory in which the user wants to save the files 
         directory = input('name of directory to download files: ')
-        SAVE_PATH = os.getcwd() + '\\' + directory.casefold().strip()
+        SAVE_PATH = os.path.join(os.getcwd(), directory.casefold().strip()) 
 
         ydl_opts = {
             'format': 'bestaudio/best',
